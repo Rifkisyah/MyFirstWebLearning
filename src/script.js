@@ -3,7 +3,7 @@
 let topScrollButton = document.getElementById('topScrollButton');
 window.onscroll = function(){topScrollFunction()};
 function topScrollFunction(){
-    if(document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000){
+    if(document.body.scrollTop > 500 || document.documentElement.scrollTop > 500){
         topScrollButton.style.display = "block";
     } else {
         topScrollButton.style.display = "none";

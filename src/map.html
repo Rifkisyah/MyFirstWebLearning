@@ -66,9 +66,24 @@
     <footer>
         <p>&copy; 2025 Skyrimisme. All rights reserved</p>
     </footer>
+    <button onclick="topScroll()" id="topScrollButton" title="Go To Top">&UpArrow;</button>
     <script>
+        let topScrollButton = document.getElementById('topScrollButton');
+        window.onscroll = function(){scrollFunction()};
+        function topScrollFunction(){
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                topScrollButton.style.display = "block";
+            } else {
+                topScrollButton.style.display = "none";
+            }
+        }
+        function topScroll(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
         window.addEventListener('load', function() {
-            fetch('../assets/texts/deskripsi-map.txt') // Ganti dengan file yang ada di server
+            fetch('../assets/texts/deskripsi-map.txt') 
             .then(response => response.text())
             .then(text => {
                 const formated_text = text
@@ -82,7 +97,7 @@
             });
         });
         window.addEventListener('load', function() {
-            fetch('../assets/texts/deskripsi-solitude.txt') // Ganti dengan file yang ada di server
+            fetch('../assets/texts/deskripsi-solitude.txt') 
             .then(response => response.text())
             .then(text => {
                 const formated_text = text
@@ -96,7 +111,7 @@
             });
         });
         window.addEventListener('load', function() {
-            fetch('../assets/texts/deskripsi-whiterun.txt') // Ganti dengan file yang ada di server
+            fetch('../assets/texts/deskripsi-whiterun.txt') 
             .then(response => response.text())
             .then(text => {
                 const formated_text = text
@@ -110,7 +125,7 @@
             });
         });
         window.addEventListener('load', function() {
-            fetch('../assets/texts/deskripsi-windhelm.txt') // Ganti dengan file yang ada di server
+            fetch('../assets/texts/deskripsi-windhelm.txt') 
             .then(response => response.text())
             .then(text => {
                 const formated_text = text
@@ -124,7 +139,7 @@
             });
         });
         window.addEventListener('load', function() {
-            fetch('../assets/texts/deskripsi-riften.txt') // Ganti dengan file yang ada di server
+            fetch('../assets/texts/deskripsi-riften.txt') 
             .then(response => response.text())
             .then(text => {
                 const formated_text = text

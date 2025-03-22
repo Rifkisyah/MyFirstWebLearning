@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    /* padding: 0; */
+    padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(24, 27, 32);
 }
@@ -8,23 +8,33 @@ body {
 header{
     display: inline-flex;
     background-color: rgb(24, 27, 32);
-    color: rgb(205, 192, 158);
     width: 100%;
     padding: 0px;
+    position: fixed;
+    top: 0;
 }
 
-header h1 {
+header .nameWebLink h1{
     margin: 15px;
-    margin-right: 80%;
-    margin-left: 50px;
+    margin-left: 10px;
     cursor: pointer;
+    color: rgb(205, 192, 158);
+    text-decoration: none;
 }
 
-header img {
+header #logo {
+    padding-left: 10px;
     width: 50px;
     height: 50px;
     border-radius: 30px;
     margin: 10px;
+    cursor: pointer;
+}
+
+header #charOpening {
+    margin-left: 73%;
+    width: 150px;
+    height: 70px;
     cursor: pointer;
 }
 
@@ -33,6 +43,9 @@ header img {
 nav {
     background-color: rgb(36, 42, 52);
     height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 8vh;
 }
 
 nav ul {
@@ -58,6 +71,7 @@ section {
     width: 100%;
     margin: 0;
     background-color: rgb(21, 24, 29);
+    padding-top: 14vh;
 }
 
 /* article */

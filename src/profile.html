@@ -38,21 +38,7 @@
     <footer>
         <p>&copy; 2025 Skyrimisme. All rights reserved</p>
     </footer>
-    <script>
-        window.addEventListener('load', function() {
-            fetch('../assets/texts/deskripsi-profile.txt') // Ganti dengan file yang ada di server
-            .then(response => response.text())
-            .then(text => {
-                const formated_text = text
-                    .replace(/\n/g, '<br>')
-                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
-                document.getElementById('deskripsi').innerHTML = formated_text;
-            })
-        .catch(error => {
-            console.error('Terjadi kesalahan:', error);
-            document.getElementById('deskripsi').textContent = "Gagal memuat file.";
-            });
-        });
-    </script>
+    <button onclick="topScroll()" id="topScrollButton" title="Go To Top">&UpArrow;</button>
+    <script src="script.js"></script>
 </body>
 </html>

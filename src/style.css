@@ -206,6 +206,7 @@ h1::selection, p::selection, a::selection {
     padding: 15px; 
     border-radius: 10px;
     font-size: 18px;
+    width: 50px;
 }
 
 #topScrollButton:hover {

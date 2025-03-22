@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyrimIsMe - map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SkyrimIsMe</h1>
+
+        <img src="..\assets\images\icons\skyrim-logo.png" alt="photo-profile"> 
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="character.html">Character</a></li>
+            <li><a href="profile.html">About Me</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h1 id="map">Skyrim Map</h1>
+            <img src="..\assets\images\map_locations\map.png" alt="skyrim-map">
+            <p id="deskripsi-map"></p><br>
+
+            <h2 id="solitude">Solitude</h2>
+            <img src="..\assets\images\map_locations\solitude.png">
+            <p id="deskripsi-solitude"></p><br>
+
+            <h2 id="whiterun">Whiterun</h2>
+            <img src="..\assets\images\map_locations\whiterun.png">
+            <p id="deskripsi-whiterun"></p><br>
+
+            <h2 id="windhelm">Windhelm</h2>
+            <img src="..\assets\images\map_locations\windhelm.png">
+            <p id="deskripsi-windhelm"></p><br>
+
+            <h2 id="riften">Riften</h2>
+            <img src="..\assets\images\map_locations\riften.png">
+            <p id="deskripsi-riften"></p><br>
+
+            <h2 id="markarth">Markarth</h2>
+            <img src="..\assets\images\map_locations\markarth.png">
+            <p id="deskripsi-markarth"></p><br>
+
+            <h2 id="falkreath">Falkreath</h2>
+            <img src="..\assets\images\map_locations\falkreath.png">
+            <p id="deskripsi-falkreath"></p><br>
+        </article>
+        <aside>
+            <h1>Table Of Content</h1>
+            <ul>
+                <li><a href="#map">Map</a></li>
+                <li><a href="#solitude">Solitude</a></li>
+                <li><a href="#whiterun">Whiterun</a></li>
+                <li><a href="#windhelm">Windhelm</a></li>
+                <li><a href="#riften">Riften</a></li>
+                <li><a href="#markarth">Markarth</a></li>
+                <li><a href="#falkreath">Falkreath</a></li>
+            </ul>
+        </aside>
+    </section>
+    <footer>
+        <p>&copy; 2025 Skyrimisme. All rights reserved</p>
+    </footer>
+    <script>
+        window.addEventListener('load', function() {
+            fetch('../assets/texts/deskripsi-map.txt') // Ganti dengan file yang ada di server
+            .then(response => response.text())
+            .then(text => {
+                const formated_text = text
+                    .replace(/\n/g, '<br>')
+                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                document.getElementById('deskripsi-map').innerHTML = formated_text;
+            })
+        .catch(error => {
+            console.error('Terjadi kesalahan:', error);
+            document.getElementById('deskripsi-map').textContent = "Gagal memuat file.";
+            });
+        });
+        window.addEventListener('load', function() {
+            fetch('../assets/texts/deskripsi-solitude.txt') // Ganti dengan file yang ada di server
+            .then(response => response.text())
+            .then(text => {
+                const formated_text = text
+                    .replace(/\n/g, '<br>')
+                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                document.getElementById('deskripsi-solitude').innerHTML = formated_text;
+            })
+        .catch(error => {
+            console.error('Terjadi kesalahan:', error);
+            document.getElementById('deskripsi-solitude').textContent = "Gagal memuat file.";
+            });
+        });
+        window.addEventListener('load', function() {
+            fetch('../assets/texts/deskripsi-whiterun.txt') // Ganti dengan file yang ada di server
+            .then(response => response.text())
+            .then(text => {
+                const formated_text = text
+                    .replace(/\n/g, '<br>')
+                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                document.getElementById('deskripsi-whiterun').innerHTML = formated_text;
+            })
+        .catch(error => {
+            console.error('Terjadi kesalahan:', error);
+            document.getElementById('deskripsi-whiterun').textContent = "Gagal memuat file.";
+            });
+        });
+        window.addEventListener('load', function() {
+            fetch('../assets/texts/deskripsi-windhelm.txt') // Ganti dengan file yang ada di server
+            .then(response => response.text())
+            .then(text => {
+                const formated_text = text
+                    .replace(/\n/g, '<br>')
+                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                document.getElementById('deskripsi-windhelm').innerHTML = formated_text;
+            })
+        .catch(error => {
+            console.error('Terjadi kesalahan:', error);
+            document.getElementById('deskripsi-windhelm').textContent = "Gagal memuat file.";
+            });
+        });
+        window.addEventListener('load', function() {
+            fetch('../assets/texts/deskripsi-riften.txt') // Ganti dengan file yang ada di server
+            .then(response => response.text())
+            .then(text => {
+                const formated_text = text
+                    .replace(/\n/g, '<br>')
+                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                document.getElementById('deskripsi-riften').innerHTML = formated_text;
+            })
+        .catch(error => {
+            console.error('Terjadi kesalahan:', error);
+            document.getElementById('deskripsi-riften').textContent = "Gagal memuat file.";
+            });
+        });
+        window.addEventListener('load', function() {
+            fetch('../assets/texts/deskripsi-markarth.txt') // Ganti dengan file yang ada di server
+            .then(response => response.text())
+            .then(text => {
+                const formated_text = text
+                    .replace(/\n/g, '<br>')
+                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                document.getElementById('deskripsi-markarth').innerHTML = formated_text;
+            })
+        .catch(error => {
+            console.error('Terjadi kesalahan:', error);
+            document.getElementById('deskripsi-markarth').textContent = "Gagal memuat file.";
+            });
+        });
+        window.addEventListener('load', function() {
+            fetch('../assets/texts/deskripsi-falkreath.txt') // Ganti dengan file yang ada di server
+            .then(response => response.text())
+            .then(text => {
+                const formated_text = text
+                    .replace(/\n/g, '<br>')
+                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                document.getElementById('deskripsi-falkreath').innerHTML = formated_text;
+            })
+        .catch(error => {
+            console.error('Terjadi kesalahan:', error);
+            document.getElementById('deskripsi-falkreath').textContent = "Gagal memuat file.";
+            });
+        });
+    </script>
+</body>
+</html>

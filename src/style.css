@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    /* padding: 0; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(24, 27, 32);
+}
+
+header{
+    display: inline-flex;
+    background-color: rgb(24, 27, 32);
+    color: rgb(205, 192, 158);
+    width: 100%;
+    padding: 0px;
+}
+
+header h1 {
+    margin: 15px;
+    margin-right: 80%;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* navigation menu */
+
+nav {
+    background-color: rgb(36, 42, 52);
+    height: 50px;
+}
+
+nav ul {
+    padding-left: 40%;
+    list-style-type: none;
+    display: inline-flex;
+}
+
+nav ul li {
+    padding-right: 30px;
+    font-size: 16px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(205, 192, 158);
+}
+
+/* section */
+
+section {
+    display: inline-flex;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(21, 24, 29);
+}
+
+/* article */
+
+article {
+    background-color: rgb(21, 24, 29);
+    color: rgb(205, 192, 158);
+    width: 70%;
+    padding: 30px;
+    
+}
+
+article h1 {
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+article img {
+    width: 100%;
+    /* padding-left: 5%; */
+    padding-bottom: 5%;
+}
+
+article p {
+    text-align: justify;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* side */
+
+aside {
+    background-color: rgb(51, 53, 57);
+    padding: 0;
+    width: 30%;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+aside li {
+    font-size: 25px;
+    padding-top: 20px;
+    padding: 5px;
+    background-color: rgb(36, 42, 52);
+    border: 5px solid rgb(29, 30, 35);
+    border-radius: 10px;
+}
+
+aside h1 {
+    color: rgb(205, 192, 158);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+aside hr {
+    border: 3px solid rgb(205, 192, 158);
+    margin-top: 0;
+    cursor: default;
+}
+
+aside a {
+    text-decoration: none;
+    color: rgb(205, 192, 158);
+    font-weight: bold;
+    padding: 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+/* profile card */
+
+.profile {
+    width: 100%;
+}
+
+.profile article {
+    width: 90%;
+}
+
+.profile aside {
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    border: 3px solid rgb(205, 192, 158);
+}
+
+.profile aside p {
+    color: rgb(205, 192, 158);
+    text-align: center;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.profile hr {
+    border: solid 5px rgb(205, 192, 158);
+    padding-top: 0;
+}
+
+
+
+/* footer */
+
+footer {
+    background-color: rgb(36, 42, 52);
+    width: 100%;
+    color: rgb(205, 192, 158);
+    height: 70px;
+    justify-content: center;
+    display: inline-flex;
+    padding-top: 20px;
+}
+
+/* pseudo element */
+
+aside a:hover, header h1:hover, nav a:hover {
+    color: white;
+}
+
+h1::selection, p::selection, a::selection {
+    background-color: rgb(205, 192, 158);
+    color: rgb(36, 42, 52);
+}

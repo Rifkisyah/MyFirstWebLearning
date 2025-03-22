@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyrimIsMe - home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SkyrimIsMe</h1>
+
+        <img src="..\assets\images\icons\skyrim-logo.png" alt="photo-profile"> 
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="character.html">Character</a></li>
+            <li><a href="profile.html">About Me</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h1>Apa itu Skyrim ?</h1>
+            <img src="..\assets\images\main_content\skyrim-enterance.png">
+            <p id="apa-itu-skyrim">Memuat data...</p>
+        </article>
+        <aside>
+            <ul>
+                <li><h1>Rekomendasi Konten<br><hr></h1></li>
+                <li><a href="#">musik terbaik yang ada di Skyrim!</a></li>
+                <li><a href="#">apa saja kota yang ada di skyrim?</a></li>
+                <li><a href="#">Siapa itu Jarl?</a></li>
+                <li><a href="#">mengapa player disebut dragonborn?</a></li>
+            </ul>
+        </aside>
+    </section>
+    <footer>
+        <p>&copy; 2025 Skyrimisme. All rights reserved</p>
+    </footer>
+    <script>
+        window.addEventListener('load', function() {
+            fetch('../assets/texts/apa_itu_skyrim.txt')
+            .then(response => response.text())
+            .then(text => {
+                const formated_text = text
+                    .replace(/\n/g, '<br>')
+                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                document.getElementById('apa-itu-skyrim').innerHTML = formated_text;
+            })
+        .catch(error => {
+            console.error('Terjadi kesalahan:', error);
+            document.getElementById('apa-itu-skyrim').textContent = "Gagal memuat file.";
+            });
+        });
+    </script>
+</body>
+</html>

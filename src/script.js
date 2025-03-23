@@ -69,10 +69,10 @@ window.addEventListener('load', function() {
         const dataArray = data["map-article"];
         dataArray.forEach(item => {
             if(item["title-map-skyrim"] && item["image-map-skyrim"] && item["map-description"]){
-                const mapTitle = document.createElement('h2');
-                mapTitle.innerHTML = item["title-map-skyrim"];
-                document.getElementById('map-title').appendChild(mapTitle);
-
+                document.getElementById('map-title').innerHTML = item["title-map-skyrim"];
+                document.getElementById('map-image').src = item["image-map-skyrim"];
+                const description = Array.isArray(item["map-description"]) ? item["map-description"].join("\n\n") : item["map-description"];
+                document.getElementById('map-description').innerText = description;
             }
             if(item["title-riften"] && item["image-riften"] && item["description-riften"]){
                 document.getElementById('riften-title').innerHTML = item["title-riften"];
